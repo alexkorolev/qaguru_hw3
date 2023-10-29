@@ -1,13 +1,9 @@
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
-import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -50,16 +46,15 @@ public class demoqaTests {
         $("[id=city] input").val("Noida").pressEnter();
         $("#submit").click();
 
-        $(".table-responsive").
-                shouldHave(text("FirstName LastName")).
-                shouldHave(text("test@test.com")).
-                shouldHave(text("Male")).
-                shouldHave(text("9990002233")).
-                shouldHave(text("30 October,1985")).
-                shouldHave(text("English")).
-                shouldHave(text("Reading")).
-                shouldHave(text("my.png")).
-                shouldHave(text("Lenina street 100 , flat 101")).
-                shouldHave(text("NCR Noida"));
+        $(".table-responsive").shouldHave(text("FirstName LastName"));
+        $(".table-responsive").shouldHave(text("test@test.com"));
+        $(".table-responsive").shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("9990002233"));
+        $(".table-responsive").shouldHave(text("30 October,1985"));
+        $(".table-responsive").shouldHave(text("English"));
+        $(".table-responsive").shouldHave(text("Reading"));
+        $(".table-responsive").shouldHave(text("my.png"));
+        $(".table-responsive").shouldHave(text("Lenina street 100 , flat 101"));
+        $(".table-responsive").shouldHave(text("NCR Noida"));
     }
 }
