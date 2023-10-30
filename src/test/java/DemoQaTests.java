@@ -39,7 +39,6 @@ public class DemoQaTests {
         $("#hobbiesWrapper").$(byText("Reading")).click();
 
         $("#uploadPicture").uploadFromClasspath("my.png");
-        //$("[#uploadPicture]").uploadFile(new File("src/test/data/my.png"));
 
         $("#currentAddress").setValue("Lenina street 100 , flat 101");
 
